@@ -1,4 +1,4 @@
-key = "abcdefghijklmnopqrstuvwxyz" # cypher key
+key = "abcdefghijklmnopqrstuvwxyz" # cypher key used to encrypt and decrypt messages
 
 def encrypt(message):
     result = ""
@@ -26,11 +26,11 @@ def decrypt(message):
 e_or_d = str(raw_input("\nEncrypt or decrypt a message? - Type encrypt(e) or decrypt(d): ")).lower()
 if e_or_d == "encrypt" or e_or_d == "e":
     message = str(raw_input("Input message to encrypt: ")).lower()
-    n = int(raw_input("How many places to shift your message? ")) # n is the spaces to shift
+    n = int(raw_input("How many places to shift your message? ")) # n determines the spaces to shift
     encrypt(message)
 elif e_or_d == "d" or e_or_d == "d":
     message = str(raw_input("Input message to decrypt: ")).lower()
-    n = int(raw_input("How many places to shift your message? ")) # n is the spaces to shift
+    n = int(raw_input("How many places to shift your message? ")) # n determines the spaces to shift
     decrypt(message)
 else:
     print "\nI don't understand what you mean. Try again later!\n"
